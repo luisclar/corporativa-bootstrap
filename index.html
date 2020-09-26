@@ -11,15 +11,48 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Web corporativa</title>
   </head>
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <header>
-      <div class="container-fluid jumbotron bg-info text-center text-light">
+      <nav class="navbar navbar-expand-sm bg-info navbar-dark justify-content-between fixed-top">
+        <a id="logo"class="navbar-brand" href="index.html">
+       <img src="" alt="Logo" style="width:40px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mi-menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="mi-menu">
+        <ul class="navbar-nav nav-pills">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Mission">Mission</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <div id="home" class="container-fluid jumbotron bg-info text-center text-light mb-0 rounded-0">
           <h1>Web corporativa</h1>
           <p>We specialize in bla bla bla</p>
       </div>
-    </header>
+    </section>
+
     <section class="container-fluid py-5">
-      <div class="container">
+      <div id="About" class="container">
         <div class="row">
           <div class="col-8">
             <h2>About Company Page</h2>
@@ -34,7 +67,7 @@
         </div>
     </section>
     <section class="container-fluid bg-light py-5">
-      <div class="container">
+      <div id="Mission" class="container">
         <div class="row">
           <div class="col-4 display-2">
             <i class="fas fa-globe-europe text-info"></i>
@@ -48,7 +81,7 @@
       </div>
     </section>
     <section class="container-fluid text-center py-5">
-      <div class="container">
+      <div id="Services" class="container">
         <div class="row">
           <div class="col-12">
             <h2>SERVICES</h2>
@@ -89,7 +122,7 @@
       </div>
     </section>
     <section class="container-fluid text-center bg-light py-5">
-      <div class="container">
+      <div id="Portfolio" class="container">
         <div class="row">
           <div class="col-12">
             <h2>Portfolio</h2>
@@ -97,7 +130,7 @@
           </div>
           <article class="col-4 mt-4">
             <div class="card">
-            <img class="card-img-top" src="https://fotografias.lasexta.com/clipping/cmsimages02/2020/06/23/BBCA93E2-CD18-4592-92FC-F71F5C51F6A1/58.jpg" alt="Torre Eiffel">
+            <img class="card-img-top img-fluid" src="https://fotografias.lasexta.com/clipping/cmsimages02/2020/06/23/BBCA93E2-CD18-4592-92FC-F71F5C51F6A1/58.jpg" alt="Torre Eiffel">
             <div class="card-body">
               <h4>Paris</h4>
               <p>Yes, we build Paris</p>
@@ -106,8 +139,8 @@
           </article>
           <article class="col-4 mt-4">
             <div class="card">
-            <div class="" style="height: 197px; overflow: hidden">
-              <img class="card-img-top" src="https://www.ef.com.es/sitecore/__/~/media/universal/pg/8x5/destination/DE_00_BER_1.jpg" alt="Berlin">
+            <div class="">
+              <img class="card-img-top img-fluid" src="https://www.ef.com.es/sitecore/__/~/media/universal/pg/8x5/destination/DE_00_BER_1.jpg" alt="Berlin">
             </div>
             <div class="card-body">
               <h4>Berlin</h4>
@@ -117,8 +150,8 @@
           </article>
           <article class="col-4 mt-4">
             <div class="card">
-            <div class="" style="height: 197px">
-              <img class="card-img-top"src="https://www.visittheusa.mx/sites/default/files/styles/hero_l_x2/public/images/hero_media_image/2017-05/9dbea438bcd305129064e4a048cc6b52.jpeg?itok=fsRq3wyj" alt="Torre Eiffel">
+            <div class="">
+              <img class="card-img-top img-fluid"src="https://www.visittheusa.mx/sites/default/files/styles/hero_l_x2/public/images/hero_media_image/2017-05/9dbea438bcd305129064e4a048cc6b52.jpeg?itok=fsRq3wyj" alt="Torre Eiffel">
             </div>
             <div class="card-body">
               <h4>New York</h4>
@@ -131,7 +164,7 @@
     </section>
     <footer>
       <section class="container-fluid bg-info text-light py-5">
-        <div class="container">
+        <div  id="contact" class="container">
           <div class="row">
             <div class="col-6 text-left">
               <p>Contact us and we'll get back to you within 24 hours.</p>
@@ -142,17 +175,17 @@
             <div class="col-6 text-left">
               <h4>CONTACT</h4>
               <form class="" action="index.html" method="post">
+                <div class="row">
+                <div class="col">
+                <input type="text" class="form-control" id="name" placeholder="Name" name="Name">
+                </div>
+                <div class="col">
+                <input type="email" class="form-control" placeholder="Email" name="email">
+                </div>
+                </div>
+                <br>
               <div class="form-group">
-                <label for="Name">Name:</label>
-                <input type="text" class="form-control" placeholder="Name" id="Name">
-              </div>
-              <div class="form-group">
-                <label for="email">Email address:</label>
-                <input type="email" class="form-control" placeholder="Enter email" id="email">
-              </div>
-              <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea name="message" rows="3" class="form-control"></textarea>
+                <textarea name="message" rows="3" class="form-control" placeholder="Message"></textarea>
               </div>
               <div class="form-group">
                 <button type="submit" name="send" class="btn btn-light">Send</button>
